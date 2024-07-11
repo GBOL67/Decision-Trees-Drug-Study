@@ -11,19 +11,32 @@
 <li>The target variable is the drug each patient responded to.</li>
 </ul>
 The dataset is diverse, representing different age groups, both sexes, various blood pressure levels, cholesterol levels, and sodium-to-potassium ratios. Understanding these features is crucial as they play significant roles in determining the effectiveness of the prescribed drugs.</p>
-<h2> Data Preparation </h2>
+<h2> Data Preparation And Analysis</h2>
 The dataset is read using pandas, and the following variables are defined:
 <ul>
 <li>X as the Feature Matrix (data of my_data)</li>
 <li>y as the response vector (target)</li>
 <li>The column containing the target name is removed since it does not contain numeric values.</li>
 </ul>
+<img src="https://github.com/GBOL67/DecisionTrees-Drug-Study/blob/main/media/1.PNG" align="center" width="400" height="300" />
+<p>The figure shows the distribution of the target variable</p>
+<p>The distribution analysis reveals that Drug Y is the most commonly prescribed medication for the patients in this dataset, followed by Drug C. Drug X, Drug A, and Drug B are less frequently chosen. This information can help healthcare providers understand the current trends in drug prescriptions for this illness and consider the effectiveness and suitability of these medications for future patients. Further analysis could explore the reasons behind these trends and the specific characteristics of patients that lead to the choice of each drug.</p>
 <h2> Modelling </h2>
 <p>The decision tree model was developed using the grid search method to find the optimal tree depth, which was determined to be 3. The initial model was then evaluated using a confusion matrix and classification report.</p>
+<img src="https://github.com/GBOL67/DecisionTrees-Drug-Study/blob/main/media/tree.png" align="center" width="400" height="300" />
 <p>The model shows high accuracy and excellent performance for most of the drugs. However, there are some challenges in predicting Drug C accurately, as evidenced by the low precision for this class.</p>
 <h2> Evaluation </h2>
-The decision tree model was developed using the grid search method to find the optimal tree depth, which was determined to be 3. The initial model was then evaluated using a confusion matrix and classification report.
-<img src="https://github.com/GBOL67/Taxi-Tip-Prediction/blob/main/tips/log_classi.PNG" align="center" width="400" height="300" />
+<p>The decision tree model was developed using the grid search method to find the optimal tree depth, which was determined to be 3. The initial model was then evaluated using a confusion matrix and classification report.</p>
+Confusion Matrix: 
+<p>[ 7,  0,  0,  0,  0]</p>
+<p>[ 0,  5,  0,  0,  0]</p>
+<p>[ 0,  0,  5,  0,  0]</p>
+<p>[ 0,  0, 10, 10,  1]</p>
+<p>[ 0,  0,  0,  0, 22]]</p>
+
+Classification Method:
+<img src="https://github.com/GBOL67/DecisionTrees-Drug-Study/blob/main/media/tree.png" align="center" width="400" height="300" />
+
 <h2> Model Refinement </h2>
 <p>The model was refined using cross-validation with the following parameters: n_splits=4, shuffle=True, random_state=3. The accuracy for each fold was:</p>
 <ul>  
