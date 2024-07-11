@@ -24,6 +24,14 @@ The dataset is read using pandas, and the following variables are defined:
 <h2> Modelling </h2>
 <p>The decision tree model was developed using the grid search method to find the optimal tree depth, which was determined to be 3. The initial model was then evaluated using a confusion matrix and classification report.</p>
 <img src="https://github.com/GBOL67/DecisionTrees-Drug-Study/blob/main/media/tree.png" align="center" width="400" height="300" />
+<p>(This figure visualizes the decision tree)</p>
+<ul>
+  <li>Drug A: Green
+  <li>Drug B: Sky-blue
+  <li>Drug C: Brown
+  <li>Drug X: BLue
+  <li>Drug Y: Purple
+</ul>
 <p>The model shows high accuracy and excellent performance for most of the drugs. However, there are some challenges in predicting Drug C accurately, as evidenced by the low precision for this class.</p>
 <h2> Evaluation </h2>
 <p>The decision tree model was developed using the grid search method to find the optimal tree depth, which was determined to be 3. The initial model was then evaluated using a confusion matrix and classification report.</p>
