@@ -27,15 +27,15 @@ The dataset is read using pandas, and the following variables are defined:
 <p>The model shows high accuracy and excellent performance for most of the drugs. However, there are some challenges in predicting Drug C accurately, as evidenced by the low precision for this class.</p>
 <h2> Evaluation </h2>
 <p>The decision tree model was developed using the grid search method to find the optimal tree depth, which was determined to be 3. The initial model was then evaluated using a confusion matrix and classification report.</p>
-Confusion Matrix: 
+<b>Confusion Matrix:</b> 
 <p>[ 7,  0,  0,  0,  0]</p>
 <p>[ 0,  5,  0,  0,  0]</p>
 <p>[ 0,  0,  5,  0,  0]</p>
 <p>[ 0,  0, 10, 10,  1]</p>
 <p>[ 0,  0,  0,  0, 22]]</p>
 
-Classification Method:
-<img src="https://github.com/GBOL67/DecisionTrees-Drug-Study/blob/main/media/tree.png" align="center" width="400" height="300" />
+<b>Classification Method:</b>
+<img src="https://github.com/GBOL67/DecisionTrees-Drug-Study/blob/main/media/2.PNG" align="center" width="400" height="300" />
 
 <h2> Model Refinement </h2>
 <p>The model was refined using cross-validation with the following parameters: n_splits=4, shuffle=True, random_state=3. The accuracy for each fold was:</p>
@@ -46,6 +46,7 @@ Classification Method:
 <li>Fold 3: 0.88</li>
 </ul>
 <p>The best-performing fold (Fold 2) was used to create a refined model, which was then evaluated with the following classification report.</p>
+<img src="https://github.com/GBOL67/DecisionTrees-Drug-Study/blob/main/media/3.PNG" align="center" width="400" height="300" />
 <p>The refined model demonstrates improved accuracy and better performance for most of the drugs, with an overall accuracy of 92%. The persistent issue with predicting Drug C accurately suggests the need for further investigation and potential inclusion of additional features.</p>
 <h2> Conclusion </h2>
 <p>The decision tree model effectively predicts the appropriate drug for patients based on their clinical features, demonstrating strong performance for most drugs. The refinement process using cross-validation improved the model's accuracy, making it more reliable for clinical application. Future work could focus on addressing the persistent misclassification issues with Drug C, possibly by exploring additional features or alternative modeling techniques. This model provides a useful tool for clinicians to prescribe the most suitable medication for patients with a specific illness, leveraging patient data to make informed decisions.</p>
